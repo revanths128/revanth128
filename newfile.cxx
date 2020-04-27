@@ -1,18 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-  float arr[50],avg,sum=0;
-  int m,i;
-  printf("input how many  numbers to be averaged\t");
-  scanf("%d",&m);
-  printf("enter the values \t");
-  for(i=0;i<m;i++){
-    scanf("%f",&arr[i]);
-}
-for(i=0;i<m;i++)
-{
-  sum+=arr[i];
-}
-avg=sum/m;
-printf("\n the average of %d numbers is= %f\n",m,avg);
+   int first, second, *p, *q;
+   printf("Enter two integers\n");
+   scanf("%d%d", &first, &second);
+   p = &first;
+   q = &second;
+   printf("Sum of the numbers = %d\n",(*p + *q));
+   printf("Subtraction of the numbers = %d\n", (*p - *q));
+   printf("multiplication of the numbers = %d\n",(*p * *q));
+   printf("division of the numbers = %d\n",(*p / *q));
+   printf("modulus of the numbers = %d\n",(*p % *q) );
+   return 0;
 }
